@@ -1,0 +1,13 @@
+
+apply from: "../library.build.gradle"
+
+android {
+    namespace 'com.example.library_base'
+}
+
+dependencies {
+
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+}

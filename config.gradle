@@ -1,0 +1,19 @@
+ext {
+    //android 开发版本
+    android = [
+            compileSdkVersion: 36,
+            minSdkVersion    : 29,
+            targetSdkVersion : 36,
+            applicationId    : "com.example.componentproject",
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    //version 版本控制
+    versions = [
+
+    ]
+
+
+
+}

@@ -1,0 +1,20 @@
+apply from: "../library.build.gradle"
+
+android {
+    namespace 'com.example.library_network'
+}
+
+dependencies {
+    //retrofit2
+    api("com.squareup.retrofit2:retrofit:3.0.0")
+    //gson
+    api("com.squareup.retrofit2:converter-gson:3.0.0")
+//    //日志拦截器 5.0版本有问题
+    api("com.squareup.okhttp3:logging-interceptor:3.11.0")
+    api("com.squareup.retrofit2:adapter-rxjava2:3.0.0")
+
+    api project(':library-base')
+    implementation project(':library-common')
+
+
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">module-test</string>
+    <string name="default_loading">加载中...</string>
+</resources>

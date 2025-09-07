@@ -1,0 +1,17 @@
+<resources>
+    <string name="login_m_app_name">module-login</string>
+    <string name="login_m_login_agreement">我已阅读并同意 《隐私政策》 及 《用户服务协议》</string>
+    <string name="login_m_login_privacy_agreement">《隐私政策》</string>
+    <string name="login_m_login_user_agreement">《用户服务协议》</string>
+    <string name="login_m_setting_privacy_policy">隐私政策</string>
+
+    <string name="login_m_user_privacy_policy">本项目的API大部分来自鸿洋提供的 WanAndroid API，仅供开源学习使用，禁止用于商业用途。\n\n项目中有部分代码和资源参考其他开源项目或者其他项目，视频资源来自抖音短视频和Android官网，如有侵权请联系作者删除。\n\n如有任何问题请联系作者本人，或者在github的 Issue 中提交对本项目的改进建议~</string>
+
+    <string name="login_m_error_phone_number">请输入正确的手机号码</string>
+    <string name="login_m_error_double_password">两次输入密码不一致</string>
+    <string name="login_m_tips_read_user_agreement">请阅读并勾选用户协议</string>
+    <string name="login_m_success_register">注册成功</string>
+
+    <string name="login_m_error_null_password">密码不能为空</string>
+
+</resources>

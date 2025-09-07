@@ -1,0 +1,24 @@
+apply from: "../module.build.gradle"
+android {
+    namespace 'com.example.module_login'
+    defaultConfig {
+        if (!isModuleLibrary.toBoolean()) {
+            applicationId "com.example.module_login"
+        }
+        resourcePrefix "login_m_"
+        sourceSets {
+            main {
+                resources.excludes += [
+                        "**/databinding/*.xml",
+                        "**/layout-*/*.xml"  // 排除DataBinding生成的布局
+                ]
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library-network')
+    implementation project(':library-view')
+
+}

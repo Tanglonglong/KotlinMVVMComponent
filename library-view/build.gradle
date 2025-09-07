@@ -1,0 +1,32 @@
+//apply from: "../module.build.gradle"
+//android {
+//    namespace 'com.example.module_view'
+//    defaultConfig {
+//        if (!isModuleLibrary.toBoolean()) {
+//            applicationId "com.example.module_view"
+//        }
+//        sourceSets {
+//            main {
+//                resources.excludes += [
+//                        "**/databinding/*.xml",
+//                        "**/layout-*/*.xml"  // 排除DataBinding生成的布局
+//                ]
+//            }
+//        }
+//    }
+//}
+
+
+
+apply from: "../library.build.gradle"
+
+android {
+    namespace 'com.example.module_view'
+}
+
+dependencies {
+
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+}
