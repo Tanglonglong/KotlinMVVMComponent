@@ -4,6 +4,9 @@ if (isModuleLibrary.toBoolean()) {
     apply plugin: 'com.android.application'
 }
 apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
 
 android {
     compileSdk rootProject.ext.android.compileSdkVersion
@@ -92,9 +95,12 @@ dependencies {
 
     implementation project(':library-base')
     implementation project(':library-common')
+    implementation project(':library-data')
 
     // 要与compiler匹配使用，均使用最新版可以保证兼容
     api 'com.alibaba:arouter-api:1.5.2'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    // java和kotlin不一样，关键修改点java用的 annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    //kotlin还要apply plugin: 'kotlin-kapt'引入插件，直接用java的就一直生成不了路由，动态注入也有问题
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
 
 }

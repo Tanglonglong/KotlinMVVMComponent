@@ -2,7 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id 'kotlin-kapt'
 }
+
 
 android {
     namespace 'com.example.wanandroidapp'
@@ -36,6 +38,13 @@ android {
     buildFeatures {
         compose true
     }
+    buildFeatures {
+        dataBinding true  // 必须与子模块保持一致
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
 }
 
 dependencies {
@@ -54,4 +63,9 @@ dependencies {
     androidTestImplementation libs.androidx.ui.test.junit4
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
+    implementation project(':library-base')
+    if(isModuleLibrary.toBoolean()){
+        //整体项目运行
+        implementation project(':module-login')
+    }
 }

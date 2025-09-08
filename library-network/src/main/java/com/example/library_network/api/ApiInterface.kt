@@ -1,6 +1,6 @@
 package com.example.library_network.api
 
-import com.example.library_base.model.User
+import com.example.library_data.model.User
 import com.example.library_network.response.BaseResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

@@ -22,6 +22,7 @@ abstract class BaseMvvMActivity<VB : ViewDataBinding, VM : ViewModel>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mViewModel = ViewModelProvider(this).get(getViewModelClass())
+
     }
     abstract fun getViewModelClass(): Class<VM>
 }

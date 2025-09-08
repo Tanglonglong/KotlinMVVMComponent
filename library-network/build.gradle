@@ -13,8 +13,8 @@ dependencies {
     api("com.squareup.okhttp3:logging-interceptor:3.11.0")
     api("com.squareup.retrofit2:adapter-rxjava2:3.0.0")
 
-    api project(':library-base')
-    implementation project(':library-common')
-
+    compileOnly project(':library-base')
+    compileOnly project(':library-common')
+    compileOnly project(':library-data')
 
 }

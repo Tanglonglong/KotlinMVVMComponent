@@ -1,5 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
 
 android {
     compileSdk rootProject.ext.android.compileSdkVersion
@@ -65,6 +68,6 @@ dependencies {
     debugImplementation libs.androidx.ui.test.manifest
     // 要与compiler匹配使用，均使用最新版可以保证兼容
     api 'com.alibaba:arouter-api:1.5.2'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
 
 }

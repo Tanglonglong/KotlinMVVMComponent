@@ -13,5 +13,7 @@
     <string name="login_m_success_register">注册成功</string>
 
     <string name="login_m_error_null_password">密码不能为空</string>
+    <string name="login_m_login_know_more_android">登录后了解更多Android技术</string>
+    <string name="login_m_login_forget_password">忘记密码</string>
 
 </resources>
