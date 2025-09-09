@@ -1,0 +1,10 @@
+<resources>
+    <string name="main_m_app_name">module-main</string>
+    <string name="main_m_splash_time">跳过 %ss</string>
+
+    <string name="main_m_tab_home">首页</string>
+    <string name="main_m_tab_categories">分类</string>
+    <string name="main_m_tab_system">体系</string>
+    <string name="main_m_tab_mine">我的</string>
+
+</resources>
