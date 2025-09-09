@@ -102,5 +102,9 @@ dependencies {
     // java和kotlin不一样，关键修改点java用的 annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
     //kotlin还要apply plugin: 'kotlin-kapt'引入插件，直接用java的就一直生成不了路由，动态注入也有问题
     kapt 'com.alibaba:arouter-compiler:1.5.2'
+    // 基础依赖包，必须要依赖
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+// kotlin扩展（可选）
+    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
 
 }

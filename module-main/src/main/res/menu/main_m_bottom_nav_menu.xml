@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navi_home"
+        android:icon="@mipmap/main_m_ic_navi_home_select"
+        android:title="@string/main_m_tab_home" />
+
+    <item
+        android:id="@+id/navi_category"
+        android:icon="@mipmap/main_m_ic_navi_categories_select"
+        android:title="@string/main_m_tab_categories" />
+
+    <item
+        android:id="@+id/navi_system"
+        android:icon="@mipmap/main_m_ic_navi_find_select"
+        android:title="@string/main_m_tab_system" />
+
+    <item
+        android:id="@+id/navi_mine"
+        android:icon="@mipmap/main_m_ic_navi_mine_select"
+        android:title="@string/main_m_tab_mine" />
+</menu>

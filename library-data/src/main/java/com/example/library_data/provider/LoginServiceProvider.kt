@@ -9,8 +9,6 @@ import com.example.library_data.constant.LOGIN_SERVICE_LOGIN
 import com.example.library_data.service.ILoginService
 
 /**
- * @author mingyan.su
- * @date   2023/3/26 07:30
  * @desc   UserService提供类，对外提供相关能力
  * 任意模块就能通过LoginServiceProvider使用对外暴露的能力
  */

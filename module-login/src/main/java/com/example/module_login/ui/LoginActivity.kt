@@ -9,11 +9,12 @@ import android.text.method.PasswordTransformationMethod
 import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.library_base.ui.BaseMvvMActivity
+import com.example.library_data.constant.LOGIN_ACTIVITY_LOGIN
 import com.example.module_login.R
 import com.example.module_login.databinding.LoginMActivityLoginBinding
 import com.example.module_login.model.LoginState
-import com.example.module_login.model.RegisterState
 import com.example.module_login.utils.PrivacyPolicyUtil
 import com.example.module_login.viewModels.LoginViewModel
 import com.example.module_view.LoadingUtils
@@ -26,6 +27,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
+@Route(path = LOGIN_ACTIVITY_LOGIN)
 class LoginActivity : BaseMvvMActivity<LoginMActivityLoginBinding, LoginViewModel>(
     LoginMActivityLoginBinding::inflate
 ) {

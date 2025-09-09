@@ -1,67 +1,46 @@
 package com.example.library_data.constant
 
+
 /**
- * @desc   路由路径
- * 命名规则：/开头并且必须大于两级，/模块/分类/具体名称
- * 比如: /模块名称/组件[activity]/组件名称
- *       /模块名称/服务[service]/服务名称
+ * main模块
  */
 
-//**********************跳转相关**********************
+const val MAIN_ACTIVITY_Spl = "/main/SplashActivity"
+const val MAIN_ACTIVITY_HOME = "/main/MainActivity"
+
+
+
+/**
+ * home模块
+ */
+const val HOME_FRAGMENT = "/home/fragment/HomeFragment"
+
+/**
+ * categories模块
+ */
+const val CATEGORIES_FRAGMENT = "/categories/CategoriesFragment"
+/**
+ * system scheme 模块
+ */
+const val SCHEME_FRAGMENT = "/scheme/SystemFragment"
+/**
+ * user模块
+ */
+const val MINE_FRAGMENT = "/mine/MineFragment"
+
+
 
 /**
  * 登录模块
  */
 //登录页面
-const val LOGIN_ACTIVITY_LOGIN = "/login/activity/login"
+const val LOGIN_ACTIVITY_LOGIN = "/login/LoginActivity"
 //注册页面
-const val LOGIN_ACTIVITY_REGISTER = "/login/activity/register"
+const val LOGIN_ACTIVITY_REGISTER = "/login/RegisterActivity"
 //隐私协议界面
-const val Login_ACTIVITY_POLICY = "/login/activity/policy"
+const val Login_ACTIVITY_POLICY = "/login/PolicyActivity"
 
-/**
- * 首页模块
- */
-//首页
-const val MAIN_ACTIVITY_HOME = "/main/activity/home"
 
-/**
- * 用户模块
- */
-//设置界面
-const val USER_ACTIVITY_SETTING = "/user/activity/setting"
-//设置用户信息
-const val USER_ACTIVITY_INFO = "/user/activity/info"
-//我的收藏界面
-const val USER_ACTIVITY_COLLECTION = "/user/activity/collection"
-
-/**
- * 搜索模块-搜索页面
- */
-const val SEARCH_ACTIVITY_SEARCH = "/search/activity/search"
-
-/**
- * 视频模块
- */
-const val VIDEO_ACTIVITY_PLAYER = "/video/activity/player"
-
-/**
- * Demo模块
- */
-//Navigation
-const val DEMO_ACTIVITY_NAVIGATION = "/demo/activity/navigation"
-//Lifecycle
-const val DEMO_ACTIVITY_LIFECYCLE = "/demo/activity/lifecycle"
-//ViewModel
-const val DEMO_ACTIVITY_VIEWMODEL = "/demo/activity/viewmodel"
-//LiveData
-const val DEMO_ACTIVITY_LIVEDATA = "/demo/activity/livedata"
-//ViewBinding
-const val DEMO_ACTIVITY_VIEWBINDING = "/demo/activity/viewbinding"
-//DataBinding
-const val DEMO_ACTIVITY_DATABINDING = "/demo/activity/databinding"
-
-//**********************服务相关**********************
 
 /**
  * 登录模块-登录服务

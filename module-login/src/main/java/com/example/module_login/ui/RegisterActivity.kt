@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.library_base.ui.BaseMvvMActivity
+import com.example.library_data.constant.LOGIN_ACTIVITY_REGISTER
 import com.example.module_login.LoginApplication
 import com.example.module_login.R
 import com.example.module_login.databinding.LoginMActivityRegisterBinding
@@ -26,7 +27,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
-@Route(path = "/login/RegisterActivity", group = "login")
+@Route(path = LOGIN_ACTIVITY_REGISTER)
 class RegisterActivity : BaseMvvMActivity<LoginMActivityRegisterBinding, RegisterViewModel>(
     LoginMActivityRegisterBinding::inflate
 ) {

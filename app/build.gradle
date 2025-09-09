@@ -63,9 +63,18 @@ dependencies {
     androidTestImplementation libs.androidx.ui.test.junit4
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui.ktx
     implementation project(':library-base')
+    implementation project(':library-data')
     if(isModuleLibrary.toBoolean()){
         //整体项目运行
         implementation project(':module-login')
+        implementation project(':module-main')
+        implementation project(':module-home')
+        implementation project(':module-categories')
+        implementation project(':module-scheme')
+        implementation project(':module-mine')
+
     }
 }

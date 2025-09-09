@@ -1,0 +1,27 @@
+apply from: "../module.build.gradle"
+android {
+    namespace 'com.example.module_home'
+    defaultConfig {
+        if (!isModuleLibrary.toBoolean()) {
+            applicationId "com.example.module_home"
+        }
+        sourceSets {
+            main {
+                resources.excludes += [
+                        "**/databinding/*.xml",
+                        "**/layout-*/*.xml"  // 排除DataBinding生成的布局
+                ]
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation project(':library-network')
+    implementation project(':library-view')
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+
+}
