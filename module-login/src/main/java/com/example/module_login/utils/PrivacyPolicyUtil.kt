@@ -23,13 +23,13 @@ object PrivacyPolicyUtil {
             object : ClickableSpan() {
                 override fun onClick(view: View) {
                     val textView = view as TextView
-                    textView.highlightColor = activity.getColor(R.color.login_m_transparent)
+                    textView.highlightColor = activity.getColor(com.example.library_common.R.color.transparent)
                     PrivacyPolicyActivity.launchStart(activity)
                 }
 
                 override fun updateDrawState(ds: TextPaint) {
                     super.updateDrawState(ds)
-                    ds.color = activity.getColor(R.color.login_m_color_0165b8)
+                    ds.color = activity.getColor(com.example.library_common.R.color.color_0165b8)
                     ds.isUnderlineText = false
                     ds.clearShadowLayer()
 
@@ -43,13 +43,13 @@ object PrivacyPolicyUtil {
             object : ClickableSpan() {
                 override fun onClick(view: View) {
                     val textView = view as TextView
-                    textView.highlightColor = activity.getColor(R.color.login_m_transparent)
+                    textView.highlightColor = activity.getColor(com.example.library_common.R.color.transparent)
                     PrivacyPolicyActivity.launchStart(activity)
                 }
 
                 override fun updateDrawState(ds: TextPaint) {
                     super.updateDrawState(ds)
-                    ds.color = activity.getColor(R.color.login_m_color_0165b8)
+                    ds.color = activity.getColor(com.example.library_common.R.color.color_0165b8)
                     ds.isUnderlineText = false
                     ds.clearShadowLayer()
 

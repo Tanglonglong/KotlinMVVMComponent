@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".MainActivity"
+            android:name=".MineTestMainActivity"
             android:exported="true">
         </activity>
     </application>

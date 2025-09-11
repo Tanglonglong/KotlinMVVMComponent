@@ -3,7 +3,7 @@ package com.example.module_main.ui
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.example.library_base.ext.countDownCoroutines
+import com.example.library_common.ext.countDownCoroutines
 import com.example.library_base.ui.BaseBindingActivity
 import com.example.library_data.constant.MAIN_ACTIVITY_Spl
 import com.example.module_main.MainActivity

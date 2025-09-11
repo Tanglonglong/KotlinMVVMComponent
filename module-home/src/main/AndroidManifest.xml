@@ -3,9 +3,11 @@
 
     <application>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:name=".ui.TabDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeTestMainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

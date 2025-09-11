@@ -19,9 +19,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "VERSION_NAME", "\"${rootProject.ext.android.versionName}\""
         buildConfigField "int", "VERSION_CODE", "${rootProject.ext.android.versionCode}"
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.name)
             }
         }
 
@@ -93,18 +93,28 @@ dependencies {
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
 
-    implementation project(':library-base')
-    implementation project(':library-common')
-    implementation project(':library-data')
-
     // 要与compiler匹配使用，均使用最新版可以保证兼容
     api 'com.alibaba:arouter-api:1.5.2'
     // java和kotlin不一样，关键修改点java用的 annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
     //kotlin还要apply plugin: 'kotlin-kapt'引入插件，直接用java的就一直生成不了路由，动态注入也有问题
     kapt 'com.alibaba:arouter-compiler:1.5.2'
     // 基础依赖包，必须要依赖
-    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
 // kotlin扩展（可选）
-    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+    api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+
+    api libs.refresh.layout.kernel      //核心必须依赖
+    api libs.refresh.header.classics    //经典刷新头
+    api libs.scwang90.refresh.header.radar       //雷达刷新头
+    api libs.scwang90.refresh.header.falsify     //虚拟刷新头
+    api libs.scwang90.refresh.header.material    //谷歌刷新头
+    api libs.scwang90.refresh.header.two.level   //二级刷新头
+    api libs.scwang90.refresh.footer.ball        //球脉冲加载
+    api libs.scwang90.refresh.footer.classics    //经典加载
+    api libs.glide
+    api project(':library-base')
+    api project(':library-common')
+    api project(':library-data')
+
 
 }

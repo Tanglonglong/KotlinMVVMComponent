@@ -17,6 +17,15 @@ databindingRuntime = "8.12.2"
 navigationFragment = "2.7.0"
 navigationUiKtx = "2.7.0"
 
+refreshFooterClassicsVersion = "3.0.0-alpha"
+refreshFooterBallVersion = "3.0.0-alpha"
+refreshHeaderTwoLevelVersion = "3.0.0-alpha"
+refreshHeaderMaterialVersion = "3.0.0-alpha"
+refreshHeaderFalsifyVersion = "3.0.0-alpha"
+refreshHeaderRadarVersion = "3.0.0-alpha"
+glide = "5.0.4"
+
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -40,6 +49,19 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "databindingRuntime" }
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+
+refresh-layout-kernel = { module = "io.github.scwang90:refresh-layout-kernel", version.ref = "refreshFooterClassicsVersion" }
+refresh-header-classics = { module = "io.github.scwang90:refresh-header-classics", version.ref = "refreshFooterClassicsVersion" }
+
+scwang90-refresh-header-radar = { module = "io.github.scwang90:refresh-header-radar", version.ref = "refreshHeaderRadarVersion" }
+scwang90-refresh-header-falsify = { module = "io.github.scwang90:refresh-header-falsify", version.ref = "refreshHeaderFalsifyVersion" }
+scwang90-refresh-header-material = { module = "io.github.scwang90:refresh-header-material", version.ref = "refreshHeaderMaterialVersion" }
+scwang90-refresh-header-two-level = { module = "io.github.scwang90:refresh-header-two-level", version.ref = "refreshHeaderTwoLevelVersion" }
+scwang90-refresh-footer-ball = { module = "io.github.scwang90:refresh-footer-ball", version.ref = "refreshFooterBallVersion" }
+scwang90-refresh-footer-classics = { module = "io.github.scwang90:refresh-footer-classics", version.ref = "refreshFooterClassicsVersion" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -23,7 +23,7 @@ class CategoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.main_m_fragment_category, container, false)
+        return inflater.inflate(R.layout.categories_m_fragment_category, container, false)
     }
 
 }

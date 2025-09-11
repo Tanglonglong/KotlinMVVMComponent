@@ -20,6 +20,7 @@ import com.example.module_login.viewModels.RegisterViewModel
 import com.example.module_view.LoadingUtils
 import com.example.module_view.toast.TipsToast
 import com.example.module_view.view.textChangeFlow
+import com.gyf.immersionbar.ImmersionBar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce

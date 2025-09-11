@@ -8,11 +8,14 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.library_base.ui.BaseMvvMActivity
+import com.example.library_base.utils.LogUtil
 import com.example.library_data.constant.CATEGORIES_FRAGMENT
 import com.example.library_data.constant.HOME_FRAGMENT
+import com.example.library_data.constant.LOGIN_ACTIVITY_LOGIN
 import com.example.library_data.constant.MAIN_ACTIVITY_HOME
 import com.example.library_data.constant.MINE_FRAGMENT
 import com.example.library_data.constant.SCHEME_FRAGMENT
+import com.example.library_data.provider.UserServiceProvider
 import com.example.module_main.adapter.MainPageAdapter
 import com.example.module_main.databinding.MainMActivityMainBinding
 import com.example.module_main.utils.ColorUtils
@@ -50,13 +53,24 @@ class MainActivity :
         super.onCreate(savedInstanceState)
         mBinding.vm = mViewModel
         ImmersionBar.with(this)
-            .statusBarColor(R.color.main_m_white)
-            .navigationBarColor(R.color.main_m_white)
+            .statusBarColor(com.example.library_common.R.color.white)
+            .navigationBarColor(com.example.library_common.R.color.white)
             .fitsSystemWindows(true)
             .autoDarkModeEnable(true)
             .init()
         initView()
         initFragment()
+        initData()
+    }
+
+    fun initData(){
+//        ARouter.getInstance().build(LOGIN_ACTIVITY_LOGIN).navigation()
+//        finish()
+        LogUtil.d("DDDDDDDDDDDDDDDDDDDDDDDDDDDD:" + UserServiceProvider.userService)
+        if(!UserServiceProvider.isLogin()){
+            ARouter.getInstance().build(LOGIN_ACTIVITY_LOGIN).navigation()
+            finish()
+        }
     }
 
     private fun initView() {
@@ -96,7 +110,7 @@ class MainActivity :
             getSupportFragmentManager(),
             FragmentPagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT
         )
-        mBinding.cvContentView.setOffscreenPageLimit(1)
+        mBinding.cvContentView.setOffscreenPageLimit(3)
         mBinding.cvContentView.setAdapter(adapter)
         mNavigationController!!.setupWithViewPager(mBinding.cvContentView)
     }

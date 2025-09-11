@@ -11,4 +11,8 @@ dependencies {
     implementation libs.material
     implementation libs.androidx.constraintlayout
     api('com.tencent:mmkv-static:1.3.3')  // 最新稳定版本
+    // 基础依赖包，必须要依赖
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+// kotlin扩展（可选）
+    api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
 }

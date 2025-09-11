@@ -35,6 +35,7 @@ public class ReflectionInitApplication {
 
 
     public static String[] sInitApplicationPackage = {
+            "com.example.module_login.ApplicationInit"
             };
 
 
@@ -56,6 +57,7 @@ public class ReflectionInitApplication {
 
     public void initOnCreate() {
         for (String item : sInitApplicationPackage) {
+            if(item.isEmpty())continue;
             if (classMap.containsKey(item)) classMap.get(item).onCreate(mApplication);
             else {
                 IModuleApplicationInit init = getInitClass(item);

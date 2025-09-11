@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.example.module_home.viewModels.HomeViewModel" />
+
+    </data>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/banner_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_170"
+                app:canLoop="true"
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_below="@id/banner_home">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_6"
+                    android:padding="@dimen/dp_6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/home_m_ic_search" />
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_toStartOf="@id/iv_search"
+                    android:background="@color/color_979797"
+                    android:layout_centerVertical="true"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_toStartOf ="@id/line"
+                    app:tabBackground="@color/transparent"
+                    app:tabIndicator="@drawable/home_m_shape_tab_indicator"
+                    app:tabIndicatorColor="@color/color_0159a5"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="@dimen/dp_4"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@android:color/transparent"
+                    app:tabTextAppearance="@style/tabLayoutStyle"
+                    app:tabTextColor="@color/color_8f8e94" />
+
+            </RelativeLayout>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:layout_below="@id/ll_tab_layout"/>
+
+        </RelativeLayout >
+
+</layout>

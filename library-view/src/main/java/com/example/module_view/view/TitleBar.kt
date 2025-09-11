@@ -9,7 +9,10 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.example.module_view.R
 import com.example.module_view.databinding.LayoutTitleBarBinding
@@ -153,4 +156,60 @@ class TitleBar @JvmOverloads constructor(
         mBinding.dividerLine.visibility = if (showDividerLine) VISIBLE else GONE
         valueArray.recycle()
     }
+
+
+    fun setLeftText(title: String?) {
+        mBinding.tvLeft.text = title
+    }
+
+    fun setMiddleText(title: String?) {
+        mBinding.tvMiddle.text = title
+    }
+
+    fun setMiddleText(resId: Int) {
+        mBinding.tvMiddle.setText(resId)
+    }
+
+    fun getTitleRootView(): View {
+        return mBinding.root
+    }
+
+    fun getLeftTextView(): TextView {
+        return mBinding.tvLeft
+    }
+
+    fun getMiddleTextView(): TextView {
+        return mBinding.tvMiddle
+    }
+
+    fun getRightTextView(): TextView {
+        return mBinding.tvRight
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

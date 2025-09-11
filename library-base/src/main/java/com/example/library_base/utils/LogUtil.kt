@@ -34,7 +34,7 @@ object LogUtil {
     fun v(tag: String, msg: String) = log(Level.VERBOSE, tag, msg)
 
     @JvmStatic
-    fun d(msg: String, tag: String) = log(Level.DEBUG, tag, msg)
+    fun d(tag: String, msg: String) = log(Level.DEBUG, tag, msg)
 
     @JvmStatic
     fun d(msg: String) = log(Level.DEBUG, null, msg)

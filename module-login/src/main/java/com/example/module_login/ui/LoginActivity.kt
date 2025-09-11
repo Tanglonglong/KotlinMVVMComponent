@@ -10,8 +10,10 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.example.library_base.ui.BaseMvvMActivity
 import com.example.library_data.constant.LOGIN_ACTIVITY_LOGIN
+import com.example.library_data.constant.MAIN_ACTIVITY_HOME
 import com.example.module_login.R
 import com.example.module_login.databinding.LoginMActivityLoginBinding
 import com.example.module_login.model.LoginState
@@ -20,6 +22,7 @@ import com.example.module_login.viewModels.LoginViewModel
 import com.example.module_view.LoadingUtils
 import com.example.module_view.toast.TipsToast
 import com.example.module_view.view.textChangeFlow
+import com.gyf.immersionbar.ImmersionBar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
@@ -75,6 +78,8 @@ class LoginActivity : BaseMvvMActivity<LoginMActivityLoginBinding, LoginViewMode
                 is LoginState.Success -> {
                     mDialogUtils.dismissLoading()
                     TipsToast.showTips("登录成功")
+                    ARouter.getInstance().build(MAIN_ACTIVITY_HOME).navigation()
+                    finish()
                 }
             }
         }

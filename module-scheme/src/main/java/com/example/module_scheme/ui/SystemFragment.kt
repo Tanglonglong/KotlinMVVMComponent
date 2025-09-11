@@ -24,6 +24,6 @@ class SystemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.main_m_fragment_system, container, false)
+        return inflater.inflate(R.layout.scheme_m_fragment_system, container, false)
     }
 }

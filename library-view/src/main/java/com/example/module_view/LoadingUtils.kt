@@ -8,7 +8,7 @@ import com.example.module_view.loading.CenterLoadingView
 /**
  * 等待提示框
  */
-class LoadingUtils(private val mContext: Context) {
+class LoadingUtils(private val mContext: Context?) {
     private var loadView: CenterLoadingView? = null
 
     /**
@@ -32,7 +32,7 @@ class LoadingUtils(private val mContext: Context) {
     }
 
     fun showLoading() {
-        showLoading(mContext.getString(R.string.default_loading))
+        showLoading(mContext?.getString(R.string.default_loading))
     }
 
     /**

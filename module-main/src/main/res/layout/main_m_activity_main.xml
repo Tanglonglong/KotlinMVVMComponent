@@ -19,7 +19,7 @@
             android:id="@+id/cv_content_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            />
+            app:layout_constraintBottom_toTopOf="@id/bottom_view"/>
 
         <me.majiajie.pagerbottomtabstrip.PageNavigationView
             android:id="@+id/bottom_view"
@@ -28,7 +28,7 @@
             android:layout_gravity="bottom"
             android:background="@android:color/white"
             android:elevation="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/cv_content_view"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
